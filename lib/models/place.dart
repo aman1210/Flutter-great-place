@@ -7,21 +7,21 @@ class PlaceLocation {
   final String address;
 
   PlaceLocation({
-    this.address,
-    @required this.latitude,
-    @required this.longitude,
+    required this.address,
+    required this.latitude,
+    required this.longitude,
   });
 }
 
 class Place {
   final String id;
   final String name;
-  final PlaceLocation location;
+  final PlaceLocation? location;
   final File image;
 
   Place(
-      {@required this.id,
-      @required this.image,
-      @required this.name,
-      @required this.location});
+      {required this.id,
+      required this.image,
+      required this.name,
+      this.location});
 }
